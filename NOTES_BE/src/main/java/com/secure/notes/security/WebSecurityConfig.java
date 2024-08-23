@@ -11,7 +11,10 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+
+import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
@@ -34,11 +37,11 @@ public class WebSecurityConfig {
         return http.build();
     }
 
-    // configuring multiple users in in-memory
+    // configuring multiple users in JDBC
     // test by POST and GET request the notes using the below username and password
     @Bean
-    public UserDetailsService userDetailsService() {
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager(); //setting up in-memory authentication
+    public UserDetailsService userDetailsService(DataSource dataSource) {
+        JdbcUserDetailsManager manager = new JdbcUserDetailsManager(dataSource); //setting up jdbc authentication
         if(!manager.userExists("user1")){ // creates user1 if not exists
             manager.createUser(
                     User.withUsername("user1")

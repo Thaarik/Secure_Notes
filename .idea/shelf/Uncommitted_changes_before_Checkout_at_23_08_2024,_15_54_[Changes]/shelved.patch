@@ -1,0 +1,24 @@
+Index: NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.secure.notes.security;\n\n\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.security.config.Customizer;\nimport org.springframework.security.config.annotation.web.builders.HttpSecurity;\nimport org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;\nimport org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;\nimport org.springframework.security.config.http.SessionCreationPolicy;\nimport org.springframework.security.core.userdetails.User;\nimport org.springframework.security.core.userdetails.UserDetailsService;\nimport org.springframework.security.provisioning.InMemoryUserDetailsManager;\nimport org.springframework.security.web.SecurityFilterChain;\n\n@Configuration\n@EnableWebSecurity\npublic class WebSecurityConfig {\n\n    @Bean\n    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {\n        http.authorizeHttpRequests((requests)->\n                requests\n//                        .requestMatchers(\"/contact\").permitAll()\n//                        .requestMatchers(\"/public/**\").permitAll()\n//                        .requestMatchers(\"/admin\").denyAll()\n//                        .requestMatchers(\"/admin/**\").denyAll()\n                        .anyRequest().authenticated());\n        //http.formLogin(withDefaults());\n        http.csrf(AbstractHttpConfigurer::disable); // disable csrf token\n        http.sessionManagement(session->\n                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));\n        http.httpBasic(Customizer.withDefaults()); //basic authentication (not default in-built form based auth)\n        return http.build();\n    }\n\n    // configuring multiple users in in-memory\n    // test by POST and GET request the notes using the below username and password\n    @Bean\n    public UserDetailsService userDetailsService() {\n        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager(); //setting up in-memory authentication\n        if(!manager.userExists(\"user1\")){ // creates user1 if not exists\n            manager.createUser(\n                    User.withUsername(\"user1\")\n                            .password(\"{noop}password1\") //{noop} letting spring security know that this password is stored in plain text without any encoding.\n                            .roles(\"USER\")\n                            .build()\n            );\n        }\n        if(!manager.userExists(\"admin\")){ // creates admin if not exists\n            manager.createUser(\n                    User.withUsername(\"admin\")\n                            .password(\"{noop}adminPass\")\n                            .roles(\"ADMIN\")\n                            .build()\n            );\n        }\n        return manager;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java b/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java
+--- a/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java	(revision d757789eaf341c6c08bc2de9ae789e84a09cd2a8)
++++ b/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java	(date 1724424520077)
+@@ -34,11 +34,11 @@
+         return http.build();
+     }
+ 
+-    // configuring multiple users in in-memory
++    // configuring multiple users in JDBC
+     // test by POST and GET request the notes using the below username and password
+     @Bean
+     public UserDetailsService userDetailsService() {
+-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager(); //setting up in-memory authentication
++        JdbcUserDetailsManager manager = new JdbcUserDetailsManager(); //setting up in-memory authentication
+         if(!manager.userExists("user1")){ // creates user1 if not exists
+             manager.createUser(
+                     User.withUsername("user1")
