@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="in memory usage" />
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="updated gitignore">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/services/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/services/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/NotesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/NoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,29 +58,32 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2l3XreVCVhPDt0vl1n0PZq9efgx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.NotesApplication.executor": "Run",
-    "git-widget-placeholder": "in-memory",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.NotesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;role-based-auth&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -70,6 +93,7 @@
     <configuration name="NotesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="notes" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.secure.notes.NotesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,6 +126,8 @@
       <workItem from="1724424956255" duration="29000" />
       <workItem from="1724425098416" duration="30000" />
       <workItem from="1724425144512" duration="121000" />
+      <workItem from="1724840285614" duration="10000" />
+      <workItem from="1724841574551" duration="1330000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -159,6 +185,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated .gitignore" />
     <MESSAGE value="in memory usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="in memory usage" />
+    <MESSAGE value="updated gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore" />
   </component>
 </project>
