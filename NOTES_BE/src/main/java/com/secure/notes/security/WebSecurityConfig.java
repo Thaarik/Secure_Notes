@@ -1,15 +1,16 @@
 package com.secure.notes.security;
 
 
-import com.secure.notes.models.AppRole;
-import com.secure.notes.models.Role;
-import com.secure.notes.models.User;
-import com.secure.notes.repositories.RoleRepository;
-import com.secure.notes.repositories.UserRepository;
+import com.secure.notes.model.AppRole;
+import com.secure.notes.model.Role;
+import com.secure.notes.model.User;
+import com.secure.notes.repository.RoleRepository;
+import com.secure.notes.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -21,7 +22,7 @@ import java.time.LocalDate;
 
 @Configuration
 @EnableWebSecurity
-//@EnableMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true ) -> add this when you need method level authentication
+@EnableMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true )
 public class WebSecurityConfig {
 
     @Bean

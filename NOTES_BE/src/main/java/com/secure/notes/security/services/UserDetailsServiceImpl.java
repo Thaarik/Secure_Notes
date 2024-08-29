@@ -1,7 +1,7 @@
 package com.secure.notes.security.services;
 
-import com.secure.notes.models.User;
-import com.secure.notes.repositories.UserRepository;
+import com.secure.notes.model.User;
+import com.secure.notes.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+//custom user implementation
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

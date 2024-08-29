@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
-import com.secure.notes.models.User;
+import com.secure.notes.model.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,6 +12,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+//custom user implementation
 
 @NoArgsConstructor
 @Data
@@ -22,7 +24,7 @@ public class UserDetailsImpl implements UserDetails {
     private String username;
     private String email;
 
-    @JsonIgnore
+    @JsonIgnore // ignore the password to be included in the user json
     private String password;
 
     private boolean is2faEnabled;

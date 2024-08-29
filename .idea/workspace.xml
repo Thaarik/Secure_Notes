@@ -4,25 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="updated gitignore">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/AppRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/NotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/NotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/models/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/NoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/NoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repositories/NoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/NoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/NoteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +113,7 @@
       <workItem from="1724425098416" duration="30000" />
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
-      <workItem from="1724841574551" duration="1330000" />
+      <workItem from="1724841574551" duration="3399000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -153,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724424269514</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated">
+      <option name="closed" value="true" />
+      <created>1724843035019</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724843035019</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +180,7 @@
     <MESSAGE value="updated .gitignore" />
     <MESSAGE value="in memory usage" />
     <MESSAGE value="updated gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
 </project>
