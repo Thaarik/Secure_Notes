@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="encoded passwords">
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/CustomLoggingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="custom filter added">
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/RequestValidationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +111,7 @@
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
       <workItem from="1724841574551" duration="3399000" />
-      <workItem from="1724946057394" duration="4087000" />
+      <workItem from="1724946057394" duration="4694000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -154,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725273274928</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="custom filter added">
+      <option name="closed" value="true" />
+      <created>1725276678289</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725276678289</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +196,7 @@
     <MESSAGE value="updated gitignore" />
     <MESSAGE value="updated" />
     <MESSAGE value="encoded passwords" />
-    <option name="LAST_COMMIT_MESSAGE" value="encoded passwords" />
+    <MESSAGE value="custom filter added" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom filter added" />
   </component>
 </project>

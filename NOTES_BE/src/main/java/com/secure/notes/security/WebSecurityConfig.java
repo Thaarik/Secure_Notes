@@ -32,6 +32,9 @@ public class WebSecurityConfig {
     @Autowired
     CustomLoggingFilter customLoggingFilter;
 
+    @Autowired
+    RequestValidationFilter requestValidationFilter;
+
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http, CustomLoggingFilter customLoggingFilter) throws Exception {
         http.authorizeHttpRequests((requests)->
@@ -44,6 +47,7 @@ public class WebSecurityConfig {
         //http.formLogin(withDefaults());
         http.csrf(AbstractHttpConfigurer::disable); // disable csrf token
         http.addFilterBefore(customLoggingFilter, UsernamePasswordAuthenticationFilter.class); // custom filter applies before username password authentication function
+        http.addFilterAfter(requestValidationFilter, UsernamePasswordAuthenticationFilter.class); //custom filter for request validation after username password authentication function
         http.sessionManagement(session->
                 session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.httpBasic(Customizer.withDefaults()); //basic authentication (not default in-built form based auth)
