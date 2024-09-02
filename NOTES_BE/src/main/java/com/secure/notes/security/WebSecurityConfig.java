@@ -20,6 +20,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 //import javax.sql.DataSource;
 import java.time.LocalDate;
@@ -37,15 +38,18 @@ public class WebSecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()) // configure csrf protection to store the csrftoken in cookie format with HttpOnly false so that it accepts csrf tokens
+                .ignoringRequestMatchers("/api/auth/public/**")); // ignores csrf check for this url only
         http.authorizeHttpRequests((requests)->
                 requests // URL based security
                         .requestMatchers("/api/admin/**").hasRole("ADMIN") //"ROLE_"is removed here because hasRole method automatically appends "ROLE_" with the given role
 //                        .requestMatchers("/public/**").permitAll()
 //                        .requestMatchers("/admin").denyAll()
 //                        .requestMatchers("/admin/**").denyAll()
+                        .requestMatchers("/api/csrf-token").permitAll() // get csrf token without any authentication
                         .anyRequest().authenticated());
         //http.formLogin(withDefaults());
-        http.csrf(AbstractHttpConfigurer::disable); // disable csrf token
+//        http.csrf(AbstractHttpConfigurer::disable); // disable csrf token
 //      Not required in our project. just for learning purpose
 //        http.addFilterBefore(customLoggingFilter, UsernamePasswordAuthenticationFilter.class); // custom filter applies before username password authentication function
 //        http.addFilterAfter(requestValidationFilter, UsernamePasswordAuthenticationFilter.class); //custom filter for request validation after username password authentication function
