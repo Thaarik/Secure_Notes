@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-
-@Component
+//not required i our project. just for learning purpose
+//@Component
 public class RequestValidationFilter extends OncePerRequestFilter {
 
     @Override

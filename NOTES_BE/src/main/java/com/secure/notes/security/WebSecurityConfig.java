@@ -28,15 +28,15 @@ import java.time.LocalDate;
 @EnableWebSecurity
 @EnableMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true )
 public class WebSecurityConfig {
-
-    @Autowired
-    CustomLoggingFilter customLoggingFilter;
-
-    @Autowired
-    RequestValidationFilter requestValidationFilter;
+//      Not required in our project. just for learning purpose
+//    @Autowired
+//    CustomLoggingFilter customLoggingFilter;
+//
+//    @Autowired
+//    RequestValidationFilter requestValidationFilter;
 
     @Bean
-    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http, CustomLoggingFilter customLoggingFilter) throws Exception {
+    SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((requests)->
                 requests // URL based security
                         .requestMatchers("/api/admin/**").hasRole("ADMIN") //"ROLE_"is removed here because hasRole method automatically appends "ROLE_" with the given role
@@ -46,8 +46,9 @@ public class WebSecurityConfig {
                         .anyRequest().authenticated());
         //http.formLogin(withDefaults());
         http.csrf(AbstractHttpConfigurer::disable); // disable csrf token
-        http.addFilterBefore(customLoggingFilter, UsernamePasswordAuthenticationFilter.class); // custom filter applies before username password authentication function
-        http.addFilterAfter(requestValidationFilter, UsernamePasswordAuthenticationFilter.class); //custom filter for request validation after username password authentication function
+//      Not required in our project. just for learning purpose
+//        http.addFilterBefore(customLoggingFilter, UsernamePasswordAuthenticationFilter.class); // custom filter applies before username password authentication function
+//        http.addFilterAfter(requestValidationFilter, UsernamePasswordAuthenticationFilter.class); //custom filter for request validation after username password authentication function
         http.sessionManagement(session->
                 session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.httpBasic(Customizer.withDefaults()); //basic authentication (not default in-built form based auth)
