@@ -6,6 +6,7 @@ import com.secure.notes.model.Role;
 import com.secure.notes.model.User;
 import com.secure.notes.repository.RoleRepository;
 import com.secure.notes.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +19,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 //import javax.sql.DataSource;
 import java.time.LocalDate;
@@ -26,6 +28,12 @@ import java.time.LocalDate;
 @EnableWebSecurity
 @EnableMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true )
 public class WebSecurityConfig {
+//      Not required in our project. just for learning purpose
+//    @Autowired
+//    CustomLoggingFilter customLoggingFilter;
+//
+//    @Autowired
+//    RequestValidationFilter requestValidationFilter;
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
@@ -38,6 +46,9 @@ public class WebSecurityConfig {
                         .anyRequest().authenticated());
         //http.formLogin(withDefaults());
         http.csrf(AbstractHttpConfigurer::disable); // disable csrf token
+//      Not required in our project. just for learning purpose
+//        http.addFilterBefore(customLoggingFilter, UsernamePasswordAuthenticationFilter.class); // custom filter applies before username password authentication function
+//        http.addFilterAfter(requestValidationFilter, UsernamePasswordAuthenticationFilter.class); //custom filter for request validation after username password authentication function
         http.sessionManagement(session->
                 session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.httpBasic(Customizer.withDefaults()); //basic authentication (not default in-built form based auth)

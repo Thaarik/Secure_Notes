@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="updated">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="request validation with custom filters">
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/CustomLoggingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/CustomLoggingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/RequestValidationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/RequestValidationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +57,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.NotesApplication.executor": "Run",
-    "git-widget-placeholder": "password-encoder",
+    "git-widget-placeholder": "custom-filters",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes",
     "node.js.detected.package.eslint": "true",
@@ -111,7 +112,7 @@
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
       <workItem from="1724841574551" duration="3399000" />
-      <workItem from="1724946057394" duration="1616000" />
+      <workItem from="1724946057394" duration="5633000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -145,7 +146,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724843035019</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="encoded passwords">
+      <option name="closed" value="true" />
+      <created>1725273274928</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725273274928</updated>
+    </task>
+    <task id="LOCAL-00006" summary="custom filter added">
+      <option name="closed" value="true" />
+      <created>1725276678289</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725276678289</updated>
+    </task>
+    <task id="LOCAL-00007" summary="request validation with custom filters">
+      <option name="closed" value="true" />
+      <created>1725277079652</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725277079652</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +204,9 @@
     <MESSAGE value="in memory usage" />
     <MESSAGE value="updated gitignore" />
     <MESSAGE value="updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated" />
+    <MESSAGE value="encoded passwords" />
+    <MESSAGE value="custom filter added" />
+    <MESSAGE value="request validation with custom filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="request validation with custom filters" />
   </component>
 </project>
