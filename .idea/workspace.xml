@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="request validation with custom filters">
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/CustomLoggingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/CustomLoggingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/RequestValidationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/RequestValidationFilter.java" afterDir="false" />
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="not used in our project application, just for learning purpose">
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/CsrfController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +57,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.NotesApplication.executor": "Run",
-    "git-widget-placeholder": "custom-filters",
+    "git-widget-placeholder": "csrf",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes",
     "node.js.detected.package.eslint": "true",
@@ -112,7 +112,7 @@
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
       <workItem from="1724841574551" duration="3399000" />
-      <workItem from="1724946057394" duration="5633000" />
+      <workItem from="1724946057394" duration="8168000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -170,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725277079652</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="not used in our project application, just for learning purpose">
+      <option name="closed" value="true" />
+      <created>1725277979084</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725277979084</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +215,7 @@
     <MESSAGE value="encoded passwords" />
     <MESSAGE value="custom filter added" />
     <MESSAGE value="request validation with custom filters" />
-    <option name="LAST_COMMIT_MESSAGE" value="request validation with custom filters" />
+    <MESSAGE value="not used in our project application, just for learning purpose" />
+    <option name="LAST_COMMIT_MESSAGE" value="not used in our project application, just for learning purpose" />
   </component>
 </project>
