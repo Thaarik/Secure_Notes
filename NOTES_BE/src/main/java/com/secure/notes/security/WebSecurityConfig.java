@@ -6,11 +6,15 @@ import com.secure.notes.model.Role;
 import com.secure.notes.model.User;
 import com.secure.notes.repository.RoleRepository;
 import com.secure.notes.repository.UserRepository;
+import com.secure.notes.security.jwt.AuthEntryPointJwt;
+import com.secure.notes.security.jwt.AuthTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -36,6 +40,15 @@ public class WebSecurityConfig {
 //    @Autowired
 //    RequestValidationFilter requestValidationFilter;
 
+    @Autowired
+    private AuthEntryPointJwt unauthorizedHandler;
+
+    @Bean // to be added as a filter before UsernamePasswordAuthenticationFilter and that requires a bean object
+    public AuthTokenFilter authenticationJwtTokenFilter() {
+        return new AuthTokenFilter();
+    }
+
+
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()) // configure csrf protection to store the csrftoken in cookie format with HttpOnly false so that it accepts csrf tokens
@@ -47,16 +60,27 @@ public class WebSecurityConfig {
 //                        .requestMatchers("/admin").denyAll()
 //                        .requestMatchers("/admin/**").denyAll()
                         .requestMatchers("/api/csrf-token").permitAll() // get csrf token without any authentication
+                        .requestMatchers("/api/auth/public/**").permitAll() // for signin by any one
                         .anyRequest().authenticated());
+
         //http.formLogin(withDefaults());
 //        http.csrf(AbstractHttpConfigurer::disable); // disable csrf token
 //      Not required in our project. just for learning purpose
 //        http.addFilterBefore(customLoggingFilter, UsernamePasswordAuthenticationFilter.class); // custom filter applies before username password authentication function
 //        http.addFilterAfter(requestValidationFilter, UsernamePasswordAuthenticationFilter.class); //custom filter for request validation after username password authentication function
+        http.exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler)); // default exception handling mechanism is done by unauthorizedHandler from AuthEntryPointJwt (check top)
+        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class); //authenticationJwtTokenFilter() to be added as a filter before UsernamePasswordAuthenticationFilter and that requires a bean object (check top)
+
         http.sessionManagement(session->
                 session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.httpBasic(Customizer.withDefaults()); //basic authentication (not default in-built form based auth)
         return http.build();
+    }
+
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+        return authConfig.getAuthenticationManager();
     }
 
     // to encode password
