@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="signin sign up implementation">
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="a small update in csrf token impl.">
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuditLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/model/AuditLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/AuditLogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/AuditLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/AuditLogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,9 +69,9 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.NotesApplication.executor": "Run",
-    "git-widget-placeholder": "CORS",
+    "git-widget-placeholder": "audit-logs",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes",
+    "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes/NOTES_BE/src/main/java/com/secure/notes/controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +81,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller" />
+      <recent name="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl" />
+      <recent name="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -117,7 +129,7 @@
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
       <workItem from="1724841574551" duration="3399000" />
-      <workItem from="1724946057394" duration="30348000" />
+      <workItem from="1724946057394" duration="33476000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -207,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725370882067</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="a small update in csrf token impl.">
+      <option name="closed" value="true" />
+      <created>1725547340109</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725547340109</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +268,7 @@
     <MESSAGE value="csrf implementation" />
     <MESSAGE value="JWT implementation" />
     <MESSAGE value="signin sign up implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="signin sign up implementation" />
+    <MESSAGE value="a small update in csrf token impl." />
+    <option name="LAST_COMMIT_MESSAGE" value="a small update in csrf token impl." />
   </component>
 </project>
