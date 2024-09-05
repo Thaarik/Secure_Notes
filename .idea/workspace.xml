@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="signin sign up implementation">
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +117,7 @@
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
       <workItem from="1724841574551" duration="3399000" />
-      <workItem from="1724946057394" duration="25393000" />
+      <workItem from="1724946057394" duration="30348000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
