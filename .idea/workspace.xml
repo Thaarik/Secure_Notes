@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="a small update in csrf token impl.">
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuditLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/model/AuditLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/AuditLogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/AuditLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/AuditLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/NoteServiceImpl.java" afterDir="false" />
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="Implemented audit log in BE">
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +125,7 @@
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
       <workItem from="1724841574551" duration="3399000" />
-      <workItem from="1724946057394" duration="33476000" />
+      <workItem from="1724946057394" duration="34609000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -227,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725547340109</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implemented audit log in BE">
+      <option name="closed" value="true" />
+      <created>1725549920696</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725549920696</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +273,7 @@
     <MESSAGE value="JWT implementation" />
     <MESSAGE value="signin sign up implementation" />
     <MESSAGE value="a small update in csrf token impl." />
-    <option name="LAST_COMMIT_MESSAGE" value="a small update in csrf token impl." />
+    <MESSAGE value="Implemented audit log in BE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented audit log in BE" />
   </component>
 </project>
