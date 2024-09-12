@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="JWT implementation">
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/request/SignupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/response/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/response/UserInfoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/UserRepository.java" afterDir="false" />
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="Implemented audit log in BE">
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" afterDir="false" />
     </list>
@@ -23,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -69,9 +65,9 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.NotesApplication.executor": "Run",
-    "git-widget-placeholder": "signin-signup-login-register",
+    "git-widget-placeholder": "audit-logs",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes",
+    "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes/NOTES_BE/src/main/java/com/secure/notes/controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,6 +77,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller" />
+      <recent name="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl" />
+      <recent name="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -124,7 +125,7 @@
       <workItem from="1724425144512" duration="121000" />
       <workItem from="1724840285614" duration="10000" />
       <workItem from="1724841574551" duration="3399000" />
-      <workItem from="1724946057394" duration="21537000" />
+      <workItem from="1724946057394" duration="34609000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -206,7 +207,31 @@
       <option name="project" value="LOCAL" />
       <updated>1725364463980</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="signin sign up implementation">
+      <option name="closed" value="true" />
+      <created>1725370882067</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725370882067</updated>
+    </task>
+    <task id="LOCAL-00012" summary="a small update in csrf token impl.">
+      <option name="closed" value="true" />
+      <created>1725547340109</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725547340109</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Implemented audit log in BE">
+      <option name="closed" value="true" />
+      <created>1725549920696</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725549920696</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +271,9 @@
     <MESSAGE value="not used in our project application, just for learning purpose" />
     <MESSAGE value="csrf implementation" />
     <MESSAGE value="JWT implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="JWT implementation" />
+    <MESSAGE value="signin sign up implementation" />
+    <MESSAGE value="a small update in csrf token impl." />
+    <MESSAGE value="Implemented audit log in BE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented audit log in BE" />
   </component>
 </project>

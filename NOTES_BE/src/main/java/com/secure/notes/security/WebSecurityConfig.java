@@ -51,8 +51,12 @@ public class WebSecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()) // configure csrf protection to store the csrftoken in cookie format with HttpOnly false so that it accepts csrf tokens
-                .ignoringRequestMatchers("/api/auth/public/**")); // ignores csrf check for this url only
+
+        // some issue with this
+//        http.csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()) // configure csrf protection to store the csrftoken in cookie format with HttpOnly false so that it accepts csrf tokens
+//                .ignoringRequestMatchers("/api/auth/public/**")); // ignores csrf check for this url only
+        //use this
+        http.csrf(AbstractHttpConfigurer::disable);
         http.authorizeHttpRequests((requests)->
                 requests // URL based security
                         .requestMatchers("/api/admin/**").hasRole("ADMIN") //"ROLE_"is removed here because hasRole method automatically appends "ROLE_" with the given role
