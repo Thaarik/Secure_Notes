@@ -2,20 +2,29 @@ package com.secure.notes.services.impl;
 
 import com.secure.notes.dtos.UserDTO;
 import com.secure.notes.model.AppRole;
+import com.secure.notes.model.PasswordResetToken;
 import com.secure.notes.model.Role;
 import com.secure.notes.model.User;
+import com.secure.notes.repository.PasswordResetTokenRespository;
 import com.secure.notes.repository.RoleRepository;
 import com.secure.notes.repository.UserRepository;
 import com.secure.notes.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Value("$frontend.url") // from application.properties
+    String frontendUrl;
     
     @Autowired
     UserRepository userRepository;
@@ -25,6 +34,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     PasswordEncoder passwordEncoder;
+
+    @Autowired
+    PasswordResetTokenRespository passwordResetTokenRespository;
 
     @Override
     public void updateUserRole(Long userId, String roleName) {
@@ -121,5 +133,20 @@ public class UserServiceImpl implements UserService {
                 -> new RuntimeException("User not found"));
         user.setCredentialsNonExpired(!expire);
         userRepository.save(user);
+    }
+
+    //password reset
+    @Override
+    public void generatePasswordResetToken(String email){
+        User user = userRepository.findByEmail(email).orElseThrow(()->new RuntimeException("User not found"));
+        String token = UUID.randomUUID().toString(); //A class that represents an immutable universally unique identifier (UUID). A UUID represents a 128-bit value.
+        Instant expiryDate = Instant.now().plus(24, ChronoUnit.HOURS); // setting expiryTime for the password token to 24 hours
+        PasswordResetToken resetToken = new PasswordResetToken(token, expiryDate, user);
+        passwordResetTokenRespository.save(resetToken);
+
+        String resetUrl = frontendUrl+"/reset-password?token=" + token;
+        //Send email to the user
+
+
     }
 }
