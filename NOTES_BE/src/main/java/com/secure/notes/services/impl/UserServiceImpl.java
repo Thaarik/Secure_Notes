@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
 
     @Value("$frontend.url") // from application.properties
     String frontendUrl;
-    
+
     @Autowired
     UserRepository userRepository;
 
@@ -52,7 +52,7 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
     }
 
-//    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    //    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -85,6 +85,7 @@ public class UserServiceImpl implements UserService {
                 user.getUpdatedDate()
         );
     }
+
     @Override
     public User findByUsername(String username) {
         Optional<User> user = userRepository.findByUserName(username);
@@ -115,6 +116,7 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("Failed to update password");
         }
     }
+
     @Override
     public void updateAccountExpiryStatus(Long userId, boolean expire) {
         User user = userRepository.findById(userId).orElseThrow(()
@@ -141,17 +143,31 @@ public class UserServiceImpl implements UserService {
 
     //password reset
     @Override
-    public void generatePasswordResetToken(String email){
-        User user = userRepository.findByEmail(email).orElseThrow(()->new RuntimeException("User not found"));
+    public void generatePasswordResetToken(String email) {
+        User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
         String token = UUID.randomUUID().toString(); //A class that represents an immutable universally unique identifier (UUID). A UUID represents a 128-bit value.
         Instant expiryDate = Instant.now().plus(24, ChronoUnit.HOURS); // setting expiryTime for the password token to 24 hours
         PasswordResetToken resetToken = new PasswordResetToken(token, expiryDate, user);
         passwordResetTokenRespository.save(resetToken);
 
-        String resetUrl = frontendUrl+"/reset-password?token=" + token;
+        String resetUrl = frontendUrl + "/reset-password?token=" + token;
         //Send email to the user
         emailService.sendPasswordResetEmail(user.getEmail(), resetUrl);
+    }
 
-
+    @Override
+    public void resetPassword(String token, String newPassword) {
+        PasswordResetToken resetToken = passwordResetTokenRespository.findByToken(token).orElseThrow(() -> new RuntimeException("Invalid password reset token!"));
+        if (resetToken.isUsed()) {
+            throw new RuntimeException("Password reset token is used!");
+        }
+        if (resetToken.getExpiryDate().isBefore(Instant.now())) {
+            throw new RuntimeException("Password reset token is expired!");
+        }
+        User user = resetToken.getUser();
+        user.setPassword(passwordEncoder.encode(newPassword));
+        userRepository.save(user);
+        resetToken.setUsed(true);
+        passwordResetTokenRespository.save(resetToken);
     }
 }

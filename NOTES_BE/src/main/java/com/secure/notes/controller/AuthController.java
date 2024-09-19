@@ -178,4 +178,15 @@ public class AuthController {
         return ResponseEntity.badRequest().body(new MessageResponse("Error: Email is not valid!"));
     }
     }
+
+    @PostMapping("/public/reset-password")
+    public ResponseEntity<?> resetPassword(@RequestParam String token,
+                                           @RequestParam String newPassword){
+        try{
+            userService.resetPassword(token, newPassword);
+            return ResponseEntity.ok(new MessageResponse("Password reset successfully!"));
+        }catch (RuntimeException e){
+            return ResponseEntity.badRequest().body(new MessageResponse(e.getMessage()));
+        }
+    }
 }
