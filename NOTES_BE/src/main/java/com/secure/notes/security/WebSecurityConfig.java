@@ -65,7 +65,11 @@ public class WebSecurityConfig {
 //                        .requestMatchers("/admin/**").denyAll()
                         .requestMatchers("/api/csrf-token").permitAll() // get csrf token without any authentication
                         .requestMatchers("/api/auth/public/**").permitAll() // for signin by any one
-                        .anyRequest().authenticated());
+                        .requestMatchers("/oauth2/**").permitAll()
+                        .anyRequest().authenticated())
+                .oauth2Login(oauth->{
+
+                });
 
         //http.formLogin(withDefaults());
 //        http.csrf(AbstractHttpConfigurer::disable); // disable csrf token

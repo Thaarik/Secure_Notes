@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="email functionality">
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="Validating password reset token">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/PasswordResetTokenRespository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/repository/PasswordResetTokenRespository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,25 +57,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.NotesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;pwd-reset&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes/NOTES_BE/src/main/java/com/secure/notes/controller&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.NotesApplication.executor": "Run",
+    "git-widget-placeholder": "oauth2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/thaarik/Desktop/Project/Practice/Java/SpringBoot/SpringSecurity/SecureNotes/NOTES_BE/src/main/java/com/secure/notes/controller",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/controller" />
@@ -130,7 +128,7 @@
       <workItem from="1724946057394" duration="34609000" />
       <workItem from="1725663454491" duration="16000" />
       <workItem from="1726151873308" duration="3851000" />
-      <workItem from="1726649841409" duration="2956000" />
+      <workItem from="1726649841409" duration="10975000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -252,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726760495635</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Validating password reset token">
+      <option name="closed" value="true" />
+      <created>1726761205608</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726761205608</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +303,7 @@
     <MESSAGE value="Implemented audit log in BE" />
     <MESSAGE value="generating password reset token" />
     <MESSAGE value="email functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="email functionality" />
+    <MESSAGE value="Validating password reset token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validating password reset token" />
   </component>
 </project>
