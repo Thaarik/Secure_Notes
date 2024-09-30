@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="Validating password reset token">
+    <list default="true" id="e56c2e4c-e8f8-4126-92dc-460e77477009" name="Changes" comment="OAuth2 GitHub">
+      <change afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/config/OAuth2LoginSuccessHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOTES_BE/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/security/jwt/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/java/com/secure/notes/services/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NOTES_BE/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/NOTES_BE/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +132,7 @@
       <workItem from="1724946057394" duration="34609000" />
       <workItem from="1725663454491" duration="16000" />
       <workItem from="1726151873308" duration="3851000" />
-      <workItem from="1726649841409" duration="10975000" />
+      <workItem from="1726649841409" duration="17742000" />
     </task>
     <task id="LOCAL-00001" summary="updated .gitignore">
       <option name="closed" value="true" />
@@ -258,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726761205608</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="OAuth2 GitHub">
+      <option name="closed" value="true" />
+      <created>1727042594859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727042594859</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +316,7 @@
     <MESSAGE value="generating password reset token" />
     <MESSAGE value="email functionality" />
     <MESSAGE value="Validating password reset token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validating password reset token" />
+    <MESSAGE value="OAuth2 GitHub" />
+    <option name="LAST_COMMIT_MESSAGE" value="OAuth2 GitHub" />
   </component>
 </project>

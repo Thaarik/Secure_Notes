@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import javax.crypto.SecretKey;
 import java.security.Key;
 import java.util.Date;
+import java.util.stream.Collectors;
 
 @Component // spring is going to manage this
 public class JwtUtils {
@@ -37,8 +38,12 @@ public class JwtUtils {
     // Generate token from the username using userdetails
     public String generateTokenFromUsername(UserDetails userDetails) {
         String username = userDetails.getUsername();
+        String roles = userDetails.getAuthorities().stream()
+                .map(authority -> authority.getAuthority())
+                .collect(Collectors.joining(","));
         return Jwts.builder() //builds jwt
                 .subject(username)
+                .claim("roles", roles)
                 .issuedAt(new Date())
                 .expiration(new Date((new Date()).getTime() + jwtExpirationMs))
                 .signWith(key()) // check key() method below

@@ -1,6 +1,7 @@
 package com.secure.notes.security;
 
 
+import com.secure.notes.config.OAuth2LoginSuccessHandler;
 import com.secure.notes.model.AppRole;
 import com.secure.notes.model.Role;
 import com.secure.notes.model.User;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -43,6 +45,10 @@ public class WebSecurityConfig {
     @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
 
+    @Autowired
+    @Lazy
+    OAuth2LoginSuccessHandler oAuth2LoginSuccessHandler;
+
     @Bean // to be added as a filter before UsernamePasswordAuthenticationFilter and that requires a bean object
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
@@ -67,8 +73,8 @@ public class WebSecurityConfig {
                         .requestMatchers("/api/auth/public/**").permitAll() // for signin by any one
                         .requestMatchers("/oauth2/**").permitAll()
                         .anyRequest().authenticated())
-                .oauth2Login(oauth->{
-
+                .oauth2Login(oauth2->{
+                    oauth2.successHandler(oAuth2LoginSuccessHandler);
                 });
 
         //http.formLogin(withDefaults());
